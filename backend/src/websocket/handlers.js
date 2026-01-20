@@ -1,30 +1,22 @@
 module.exports = (io) => {
   io.on('connection', (socket) => {
-    console.log('Client connected:', socket.id);
-
     socket.on('join-proposal', (proposalId) => {
       socket.join(`proposal-${proposalId}`);
-      console.log(`Socket ${socket.id} joined proposal-${proposalId}`);
     });
 
     socket.on('leave-proposal', (proposalId) => {
       socket.leave(`proposal-${proposalId}`);
-      console.log(`Socket ${socket.id} left proposal-${proposalId}`);
     });
 
     socket.on('subscribe-treasury', () => {
       socket.join('treasury');
-      console.log(`Socket ${socket.id} subscribed to treasury`);
     });
 
     socket.on('subscribe-governance', () => {
       socket.join('governance');
-      console.log(`Socket ${socket.id} subscribed to governance`);
     });
 
-    socket.on('disconnect', () => {
-      console.log('Client disconnected:', socket.id);
-    });
+    socket.on('disconnect', () => {});
   });
 
   // Broadcast functions

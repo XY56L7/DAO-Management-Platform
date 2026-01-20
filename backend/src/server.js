@@ -51,9 +51,7 @@ app.get('/health', (req, res) => {
   });
 });
 
-// Error handling
 app.use((err, req, res, next) => {
-  console.error(err.stack);
   res.status(err.status || 500).json({
     error: {
       message: err.message || 'Internal Server Error',
@@ -69,9 +67,6 @@ app.use((req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-httpServer.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV}`);
-});
+httpServer.listen(PORT, () => {});
 
 module.exports = { app, io };
