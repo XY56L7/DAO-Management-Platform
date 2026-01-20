@@ -1,0 +1,57 @@
+.create-proposal-page {
+  max-width: 800px;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.form-card {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--dark-border);
+}

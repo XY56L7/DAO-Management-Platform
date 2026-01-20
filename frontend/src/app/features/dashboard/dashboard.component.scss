@@ -1,0 +1,165 @@
+.dashboard {
+  h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.stats-grid {
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+
+  .stat-content {
+    flex: 1;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .view-all {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.proposal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .proposal-info {
+    flex: 1;
+
+    h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .proposal-meta {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .card {
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.treasury-info {
+  margin-bottom: 1.5rem;
+}
+
+.treasury-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 0.5rem;
+
+  .label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+}
+
+.voting-power {
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  .power-display {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+
+  .power-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}

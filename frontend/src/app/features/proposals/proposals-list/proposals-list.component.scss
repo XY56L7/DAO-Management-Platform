@@ -1,0 +1,167 @@
+.proposals-page {
+  h1 {
+    margin: 0;
+  }
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.filter-group {
+  flex: 1;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--dark-bg);
+    border: 1px solid var(--dark-border);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+  }
+}
+
+.proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.proposal-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.proposal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.proposal-title-section {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.proposal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+
+  .divider {
+    opacity: 0.5;
+  }
+}
+
+.proposal-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.proposal-votes {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--dark-border);
+}
+
+.vote-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  .vote-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+
+  .vote-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+
+    &.success {
+      color: var(--success-color);
+    }
+
+    &.danger {
+      color: var(--danger-color);
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .page-info {
+    padding: 0 1rem;
+    color: var(--text-secondary);
+  }
+
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-secondary);
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}

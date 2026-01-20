@@ -1,0 +1,57 @@
+<div class="create-proposal-page">
+  <h1>Create New Proposal</h1>
+
+  <div class="card form-card">
+    <form (ngSubmit)="submitProposal()">
+      <div class="form-group">
+        <label for="title">Title *</label>
+        <input
+          type="text"
+          id="title"
+          [(ngModel)]="proposal.title"
+          name="title"
+          placeholder="Enter proposal title"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category *</label>
+        <select id="category" [(ngModel)]="proposal.category" name="category">
+          @for (category of categories; track category) {
+            <option [value]="category">{{ category }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea
+          id="description"
+          [(ngModel)]="proposal.description"
+          name="description"
+          rows="10"
+          placeholder="Describe your proposal in detail"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button 
+          type="button" 
+          class="btn btn-secondary"
+          routerLink="/proposals"
+        >
+          Cancel
+        </button>
+        <button 
+          type="submit" 
+          class="btn btn-primary"
+          [disabled]="submitting()"
+        >
+          {{ submitting() ? 'Submitting...' : 'Create Proposal' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

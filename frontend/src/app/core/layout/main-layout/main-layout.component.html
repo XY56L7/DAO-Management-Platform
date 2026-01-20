@@ -1,0 +1,61 @@
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" [class.collapsed]="!isSidebarOpen()">
+    <div class="sidebar-header">
+      <h1 class="logo">{{ isSidebarOpen() ? 'DAO Platform' : 'DP' }}</h1>
+      <button class="toggle-btn" (click)="toggleSidebar()">
+        {{ isSidebarOpen() ? '◀' : '▶' }}
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      @for (item of menuItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          class="nav-item"
+          [title]="item.label"
+        >
+          <span class="icon">{{ item.icon }}</span>
+          @if (isSidebarOpen()) {
+            <span class="label">{{ item.label }}</span>
+          }
+        </a>
+      }
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="header-left">
+          <h2>DAO Management Platform</h2>
+        </div>
+
+        <div class="header-right">
+          @if (!isConnected()) {
+            <button class="btn btn-primary" (click)="connectWallet()">
+              Connect Wallet
+            </button>
+          } @else {
+            <div class="wallet-info">
+              <div class="account-badge">
+                {{ formatAddress(account()!) }}
+              </div>
+              <button class="btn btn-secondary" (click)="disconnectWallet()">
+                Disconnect
+              </button>
+            </div>
+          }
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

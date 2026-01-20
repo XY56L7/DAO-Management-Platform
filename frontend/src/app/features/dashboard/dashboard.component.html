@@ -1,0 +1,97 @@
+<div class="dashboard">
+  <h1>Dashboard</h1>
+
+  @if (loading()) {
+    <div class="loading">Loading...</div>
+  } @else {
+    <div class="grid grid-cols-4 stats-grid">
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Proposals</div>
+          <div class="stat-value">{{ stats()?.proposals.total || 0 }}</div>
+        </div>
+      </div>
+
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Active Proposals</div>
+          <div class="stat-value">{{ stats()?.proposals.active || 0 }}</div>
+        </div>
+      </div>
+
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Members</div>
+          <div class="stat-value">{{ stats()?.users.total || 0 }}</div>
+        </div>
+      </div>
+
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Votes</div>
+          <div class="stat-value">{{ stats()?.votes.total || 0 }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2">
+      <!-- Recent Proposals -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Recent Proposals</h2>
+          <a routerLink="/proposals" class="view-all">View All →</a>
+        </div>
+
+        <div class="proposals-list">
+          @for (proposal of recentProposals(); track proposal.proposalId) {
+            <div class="proposal-item">
+              <div class="proposal-info">
+                <h3>{{ proposal.title }}</h3>
+                <p class="proposal-meta">
+                  by {{ proposal.proposer.slice(0, 10) }}... • 
+                  {{ proposal.createdAt | date: 'short' }}
+                </p>
+              </div>
+              <span class="badge" [class]="getStateClass(proposal.state)">
+                {{ proposal.state }}
+              </span>
+            </div>
+          } @empty {
+            <p class="empty-state">No proposals yet</p>
+          }
+        </div>
+      </div>
+
+      <!-- Treasury & Voting Power -->
+      <div class="right-column">
+        <div class="card">
+          <h2>Treasury</h2>
+          <div class="treasury-info">
+            <div class="treasury-balance">
+              <span class="label">ETH Balance</span>
+              <span class="value">{{ treasuryBalance()?.eth || '0' }} ETH</span>
+            </div>
+          </div>
+          <a routerLink="/treasury" class="btn btn-primary full-width">
+            View Treasury
+          </a>
+        </div>
+
+        @if (account()) {
+          <div class="card">
+            <h2>Your Voting Power</h2>
+            <div class="voting-power">
+              <div class="power-display">
+                {{ userVotingPower() }}
+              </div>
+              <p class="power-label">DGOV Tokens</p>
+            </div>
+            <a routerLink="/governance" class="btn btn-secondary full-width">
+              Manage Governance
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

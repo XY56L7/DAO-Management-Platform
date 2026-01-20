@@ -1,0 +1,102 @@
+<div class="proposals-page">
+  <div class="page-header">
+    <h1>Proposals</h1>
+    <a routerLink="/proposals/create" class="btn btn-primary">
+      Create Proposal
+    </a>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters card">
+    <div class="filter-group">
+      <label>State</label>
+      <select [(ngModel)]="selectedState" (change)="onFilterChange()">
+        @for (state of states; track state) {
+          <option [value]="state">{{ state }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label>Category</label>
+      <select [(ngModel)]="selectedCategory" (change)="onFilterChange()">
+        @for (category of categories; track category) {
+          <option [value]="category">{{ category }}</option>
+        }
+      </select>
+    </div>
+  </div>
+
+  <!-- Proposals List -->
+  @if (loading()) {
+    <div class="loading">Loading proposals...</div>
+  } @else {
+    <div class="proposals-list">
+      @for (proposal of proposals(); track proposal.proposalId) {
+        <div class="card proposal-card">
+          <div class="proposal-header">
+            <div class="proposal-title-section">
+              <h3>
+                <a [routerLink]="['/proposals', proposal.proposalId]">
+                  {{ proposal.title }}
+                </a>
+              </h3>
+              <div class="proposal-meta">
+                <span class="badge">{{ proposal.category }}</span>
+                <span class="divider">•</span>
+                <span>by {{ proposal.proposer.slice(0, 10) }}...</span>
+                <span class="divider">•</span>
+                <span>{{ proposal.createdAt | date: 'short' }}</span>
+              </div>
+            </div>
+            <span class="badge" [class]="getStateClass(proposal.state)">
+              {{ proposal.state }}
+            </span>
+          </div>
+
+          <p class="proposal-description">{{ proposal.description.slice(0, 200) }}...</p>
+
+          <div class="proposal-votes">
+            <div class="vote-item">
+              <span class="vote-label">For</span>
+              <span class="vote-value success">{{ proposal.forVotes }}</span>
+            </div>
+            <div class="vote-item">
+              <span class="vote-label">Against</span>
+              <span class="vote-value danger">{{ proposal.againstVotes }}</span>
+            </div>
+            <div class="vote-item">
+              <span class="vote-label">Abstain</span>
+              <span class="vote-value">{{ proposal.abstainVotes }}</span>
+            </div>
+          </div>
+        </div>
+      } @empty {
+        <div class="empty-state card">
+          <p>No proposals found</p>
+        </div>
+      }
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button 
+        class="btn btn-secondary" 
+        (click)="previousPage()" 
+        [disabled]="currentPage() === 1"
+      >
+        Previous
+      </button>
+      <span class="page-info">
+        Page {{ currentPage() }} of {{ totalPages() }}
+      </span>
+      <button 
+        class="btn btn-secondary" 
+        (click)="nextPage()" 
+        [disabled]="currentPage() === totalPages()"
+      >
+        Next
+      </button>
+    </div>
+  }
+</div>

@@ -1,0 +1,123 @@
+<div class="governance-page">
+  <h1>Governance</h1>
+
+  @if (loading()) {
+    <div class="loading">Loading governance data...</div>
+  } @else {
+    <div class="grid grid-cols-2">
+      <!-- Left Column -->
+      <div class="left-column">
+        <!-- Voting Power -->
+        @if (account()) {
+          <div class="card">
+            <h2>Your Voting Power</h2>
+            <div class="voting-power-display">
+              <div class="power-value">
+                {{ votingPower()?.total || '0' }}
+              </div>
+              <p class="power-label">Total Voting Power</p>
+            </div>
+            <div class="power-breakdown">
+              <div class="breakdown-item">
+                <span class="label">Direct:</span>
+                <span class="value">{{ votingPower()?.votingPower || '0' }}</span>
+              </div>
+              <div class="breakdown-item">
+                <span class="label">Escrow:</span>
+                <span class="value">{{ votingPower()?.escrowPower || '0' }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Locked Tokens -->
+          <div class="card">
+            <h2>Locked Tokens</h2>
+            @if (lockedBalance()?.amount && parseFloat(lockedBalance()?.amount) > 0) {
+              <div class="locked-info">
+                <div class="locked-amount">
+                  <span class="label">Amount Locked</span>
+                  <span class="value">{{ lockedBalance()?.amount }} DGOV</span>
+                </div>
+                <div class="locked-until">
+                  <span class="label">Unlock Date</span>
+                  <span class="value">{{ lockedBalance()?.endDate | date: 'medium' }}</span>
+                </div>
+              </div>
+            } @else {
+              <p class="info-text">No tokens currently locked</p>
+            }
+          </div>
+        }
+
+        <!-- Lock Tokens Form -->
+        @if (account()) {
+          <div class="card">
+            <h2>Lock Tokens for Voting Power</h2>
+            <div class="lock-form">
+              <div class="form-group">
+                <label>Amount to Lock</label>
+                <input
+                  type="number"
+                  [(ngModel)]="lockAmount"
+                  placeholder="0.0"
+                  min="0"
+                  step="0.01"
+                />
+              </div>
+              <div class="form-group">
+                <label>Lock Duration (days)</label>
+                <input
+                  type="number"
+                  [(ngModel)]="lockDuration"
+                  min="1"
+                  max="1460"
+                />
+                <p class="helper-text">Longer locks = More voting power</p>
+              </div>
+              <button class="btn btn-primary full-width" (click)="lockTokens()">
+                Lock Tokens
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Governance Settings -->
+        <div class="card">
+          <h2>Governance Settings</h2>
+          <div class="settings-list">
+            <div class="setting-item">
+              <span class="label">Voting Delay</span>
+              <span class="value">{{ settings()?.votingDelay || 0 }} blocks</span>
+            </div>
+            <div class="setting-item">
+              <span class="label">Voting Period</span>
+              <span class="value">{{ settings()?.votingPeriod || 0 }} blocks</span>
+            </div>
+            <div class="setting-item">
+              <span class="label">Proposal Threshold</span>
+              <span class="value">{{ settings()?.proposalThreshold || 0 }} tokens</span>
+            </div>
+            <div class="setting-item">
+              <span class="label">Quorum</span>
+              <span class="value">{{ settings()?.quorum || 0 }} tokens</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Card -->
+        <div class="card info-card">
+          <h3>About Governance</h3>
+          <ul>
+            <li>Lock tokens to increase your voting power</li>
+            <li>Longer lock periods provide more voting power</li>
+            <li>Delegate your voting power to others</li>
+            <li>Participate in DAO decisions through proposals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  }
+</div>

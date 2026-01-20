@@ -1,0 +1,101 @@
+<div class="analytics-page">
+  <h1>Analytics</h1>
+
+  @if (loading()) {
+    <div class="loading">Loading analytics...</div>
+  } @else {
+    <div class="grid grid-cols-4">
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Proposals</div>
+          <div class="stat-value">{{ stats()?.proposals.total || 0 }}</div>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Active Proposals</div>
+          <div class="stat-value">{{ stats()?.proposals.active || 0 }}</div>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Members</div>
+          <div class="stat-value">{{ stats()?.users.total || 0 }}</div>
+        </div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-content">
+          <div class="stat-label">Total Votes</div>
+          <div class="stat-value">{{ stats()?.votes.total || 0 }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2">
+      <!-- Top Voters -->
+      <div class="card">
+        <h2>Top Voters</h2>
+        <div class="leaderboard">
+          @for (voter of topVoters(); track voter.address; let idx = $index) {
+            <div class="leaderboard-item">
+              <span class="rank">{{ idx + 1 }}</span>
+              <div class="user-info">
+                <span class="address">
+                  {{ voter.username || (voter.address.slice(0, 10) + '...') }}
+                </span>
+                <span class="meta">{{ voter.votesCount }} votes</span>
+              </div>
+              <span class="score">{{ voter.votingPower }} VP</span>
+            </div>
+          } @empty {
+            <p class="empty-state">No data available</p>
+          }
+        </div>
+      </div>
+
+      <!-- Top Proposers -->
+      <div class="card">
+        <h2>Top Proposers</h2>
+        <div class="leaderboard">
+          @for (proposer of topProposers(); track proposer.address; let idx = $index) {
+            <div class="leaderboard-item">
+              <span class="rank">{{ idx + 1 }}</span>
+              <div class="user-info">
+                <span class="address">
+                  {{ proposer.username || (proposer.address.slice(0, 10) + '...') }}
+                </span>
+                <span class="meta">{{ proposer.proposalsCreated }} proposals</span>
+              </div>
+            </div>
+          } @empty {
+            <p class="empty-state">No data available</p>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Participation Rate -->
+    <div class="card">
+      <h2>Participation Rate (Recent Proposals)</h2>
+      <div class="participation-list">
+        @for (item of participation(); track item.proposalId) {
+          <div class="participation-item">
+            <div class="proposal-info">
+              <h4>{{ item.title }}</h4>
+              <p class="meta">{{ item.votersCount }} voters</p>
+            </div>
+            <div class="participation-bar">
+              <div 
+                class="participation-fill" 
+                [style.width.%]="item.participationRate"
+              ></div>
+              <span class="percentage">{{ item.participationRate }}%</span>
+            </div>
+          </div>
+        } @empty {
+          <p class="empty-state">No participation data available</p>
+        }
+      </div>
+    </div>
+  }
+</div>

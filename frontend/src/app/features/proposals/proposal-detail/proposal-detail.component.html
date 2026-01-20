@@ -1,0 +1,132 @@
+<div class="proposal-detail-page">
+  @if (loading()) {
+    <div class="loading">Loading proposal...</div>
+  } @else if (proposal()) {
+    <div class="proposal-header">
+      <div>
+        <h1>{{ proposal()!.title }}</h1>
+        <div class="proposal-meta">
+          <span class="badge">{{ proposal()!.category }}</span>
+          <span class="divider">•</span>
+          <span>by {{ proposal()!.proposer }}</span>
+          <span class="divider">•</span>
+          <span>{{ proposal()!.createdAt | date: 'medium' }}</span>
+        </div>
+      </div>
+      <span class="badge" [class]="getStateClass(proposal()!.state)">
+        {{ proposal()!.state }}
+      </span>
+    </div>
+
+    <div class="grid grid-cols-3">
+      <!-- Main Content -->
+      <div class="main-section">
+        <div class="card">
+          <h2>Description</h2>
+          <p class="description">{{ proposal()!.description }}</p>
+        </div>
+
+        <!-- Votes -->
+        <div class="card">
+          <h2>Votes</h2>
+          <div class="votes-display">
+            <div class="vote-bar">
+              <div class="bar-labels">
+                <span class="for">For: {{ proposal()!.forVotes }}</span>
+                <span class="against">Against: {{ proposal()!.againstVotes }}</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill for" style="width: 60%"></div>
+                <div class="bar-fill against" style="width: 40%"></div>
+              </div>
+            </div>
+            <div class="abstain-count">
+              Abstain: {{ proposal()!.abstainVotes }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Voters List -->
+        <div class="card">
+          <h2>Voters ({{ proposal()!.voters.length }})</h2>
+          <div class="voters-list">
+            @for (voter of proposal()!.voters; track voter.address) {
+              <div class="voter-item">
+                <div class="voter-info">
+                  <span class="voter-address">{{ voter.address.slice(0, 20) }}...</span>
+                  <span class="vote-weight">{{ voter.weight }} votes</span>
+                </div>
+                <span class="vote-support" [class]="voter.support === 1 ? 'for' : 'against'">
+                  {{ voter.support === 1 ? 'For' : voter.support === 0 ? 'Against' : 'Abstain' }}
+                </span>
+              </div>
+            } @empty {
+              <p class="empty-state">No votes yet</p>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar-section">
+        @if (proposal()!.state === 'Active' && account() && !hasUserVoted()) {
+          <div class="card voting-card">
+            <h3>Cast Your Vote</h3>
+            
+            <textarea
+              [(ngModel)]="voteReason"
+              placeholder="Reason for your vote (optional)"
+              rows="4"
+            ></textarea>
+
+            <div class="vote-buttons">
+              <button 
+                class="btn vote-for"
+                (click)="castVote(1)"
+                [disabled]="voting()"
+              >
+                Vote For
+              </button>
+              <button 
+                class="btn vote-against"
+                (click)="castVote(0)"
+                [disabled]="voting()"
+              >
+                Vote Against
+              </button>
+              <button 
+                class="btn vote-abstain"
+                (click)="castVote(2)"
+                [disabled]="voting()"
+              >
+                Abstain
+              </button>
+            </div>
+          </div>
+        } @else if (hasUserVoted()) {
+          <div class="card">
+            <p class="info-message">You have already voted on this proposal</p>
+          </div>
+        }
+
+        <div class="card">
+          <h3>Proposal Details</h3>
+          <div class="details-list">
+            <div class="detail-item">
+              <span class="label">Status</span>
+              <span class="value">{{ proposal()!.state }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Category</span>
+              <span class="value">{{ proposal()!.category }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Proposer</span>
+              <span class="value">{{ proposal()!.proposer.slice(0, 10) }}...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

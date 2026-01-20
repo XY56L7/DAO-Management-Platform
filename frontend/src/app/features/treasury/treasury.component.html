@@ -1,0 +1,70 @@
+<div class="treasury-page">
+  <h1>Treasury</h1>
+
+  @if (loading()) {
+    <div class="loading">Loading treasury data...</div>
+  } @else {
+    <!-- Balance Card -->
+    <div class="card balance-card">
+      <h2>Treasury Balance</h2>
+      <div class="balance-display">
+        <div class="balance-item">
+          <span class="label">ETH Balance</span>
+          <span class="value">{{ balance()?.eth || '0' }} ETH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analytics -->
+    <div class="grid grid-cols-3">
+      <div class="card stat-card">
+        <div class="stat-label">30-Day Inflows</div>
+        <div class="stat-value success">+{{ analytics()?.inflows || 0 }}</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-label">30-Day Outflows</div>
+        <div class="stat-value danger">-{{ analytics()?.outflows || 0 }}</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-label">Net Change</div>
+        <div class="stat-value">
+          {{ (analytics()?.inflows || 0) - (analytics()?.outflows || 0) }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Transactions -->
+    <div class="card">
+      <h2>Recent Transactions</h2>
+      <div class="transactions-list">
+        @for (tx of transactions(); track tx._id) {
+          <div class="transaction-item">
+            <div class="tx-info">
+              <div class="tx-type">
+                <span class="badge" [class]="getTypeClass(tx.type)">
+                  {{ tx.type }}
+                </span>
+              </div>
+              <div class="tx-details">
+                @if (tx.from) {
+                  <span class="tx-address">From: {{ tx.from.slice(0, 10) }}...</span>
+                }
+                @if (tx.to) {
+                  <span class="tx-address">To: {{ tx.to.slice(0, 10) }}...</span>
+                }
+                <span class="tx-time">{{ tx.timestamp | date: 'short' }}</span>
+              </div>
+            </div>
+            <div class="tx-amount">
+              <span [class]="tx.type === 'Deposit' ? 'positive' : 'negative'">
+                {{ tx.type === 'Deposit' ? '+' : '-' }}{{ tx.amount }}
+              </span>
+            </div>
+          </div>
+        } @empty {
+          <p class="empty-state">No transactions yet</p>
+        }
+      </div>
+    </div>
+  }
+</div>

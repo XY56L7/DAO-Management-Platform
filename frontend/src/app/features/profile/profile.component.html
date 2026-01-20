@@ -1,0 +1,59 @@
+<div class="profile-page">
+  @if (loading()) {
+    <div class="loading">Loading profile...</div>
+  } @else if (user()) {
+    <div class="profile-header card">
+      <div class="profile-avatar">
+        <div class="avatar-placeholder">
+          {{ user()!.username ? user()!.username.charAt(0).toUpperCase() : '?' }}
+        </div>
+      </div>
+      <div class="profile-info">
+        <h1>{{ user()!.username || 'Anonymous' }}</h1>
+        <p class="address">{{ user()!.address }}</p>
+        @if (user()!.bio) {
+          <p class="bio">{{ user()!.bio }}</p>
+        }
+      </div>
+    </div>
+
+    <div class="grid grid-cols-3">
+      <div class="card stat-card">
+        <div class="stat-label">Voting Power</div>
+        <div class="stat-value">{{ user()!.votingPower }}</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-label">Proposals Created</div>
+        <div class="stat-value">{{ user()!.proposalsCreated }}</div>
+      </div>
+      <div class="card stat-card">
+        <div class="stat-label">Votes Cast</div>
+        <div class="stat-value">{{ user()!.votesCount }}</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Vote History</h2>
+      <div class="vote-history">
+        @for (vote of voteHistory(); track vote.proposalId) {
+          <div class="vote-item">
+            <div class="vote-info">
+              <h4>{{ vote.title }}</h4>
+              <p class="vote-meta">
+                {{ vote.timestamp | date: 'medium' }}
+              </p>
+              @if (vote.reason) {
+                <p class="vote-reason">{{ vote.reason }}</p>
+              }
+            </div>
+            <span class="vote-badge" [class]="vote.support === 1 ? 'for' : 'against'">
+              {{ vote.support === 1 ? 'For' : vote.support === 0 ? 'Against' : 'Abstain' }}
+            </span>
+          </div>
+        } @empty {
+          <p class="empty-state">No vote history available</p>
+        }
+      </div>
+    </div>
+  }
+</div>
