@@ -17,12 +17,26 @@ export class Web3Service {
   account = signal<string | null>(null);
   chainId = signal<number | null>(null);
   isConnected = signal<boolean>(false);
+  useMockWallet = true;
 
   private contracts = new Map<string, Contract>();
+  private mockAccount = '0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb';
 
   constructor() {
-    this.checkConnection();
-    this.setupEventListeners();
+    if (this.useMockWallet) {
+      this.connectMockWallet();
+    } else {
+      this.checkConnection();
+      this.setupEventListeners();
+    }
+  }
+
+  private connectMockWallet() {
+    setTimeout(() => {
+      this.account.set(this.mockAccount);
+      this.chainId.set(31337);
+      this.isConnected.set(true);
+    }, 500);
   }
 
   private async checkConnection() {
@@ -54,6 +68,17 @@ export class Web3Service {
   }
 
   async connect(): Promise<string | null> {
+    if (this.useMockWallet) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          this.account.set(this.mockAccount);
+          this.chainId.set(31337);
+          this.isConnected.set(true);
+          resolve(this.mockAccount);
+        }, 300);
+      });
+    }
+
     if (typeof window.ethereum === 'undefined') {
       throw new Error('MetaMask is not installed');
     }

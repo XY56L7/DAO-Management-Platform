@@ -1,21 +1,31 @@
 .treasury-page {
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   h2 {
     margin-bottom: 1.5rem;
   }
+
+  .grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  > .card {
+    padding: 2.5rem;
+  }
 }
 
 .balance-card {
-  margin-bottom: 2rem;
-  padding: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem;
 }
 
 .balance-display {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .balance-item {
@@ -40,12 +50,12 @@
 
 .stat-card {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem;
 
   .stat-label {
     font-size: 0.875rem;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .stat-value {
@@ -65,20 +75,23 @@
 .transactions-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .transaction-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.02);
-  border-radius: 0.5rem;
-  transition: background 0.2s;
+  padding: 1.5rem;
+  background: rgba(0, 255, 136, 0.03);
+  border: 1px solid rgba(0, 255, 136, 0.1);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 255, 136, 0.08);
+    border-color: rgba(0, 255, 136, 0.2);
+    transform: translateX(4px);
   }
 }
 

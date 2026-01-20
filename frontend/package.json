@@ -18,15 +18,16 @@
     "@angular/platform-browser": "^18.2.0",
     "@angular/platform-browser-dynamic": "^18.2.0",
     "@angular/router": "^18.2.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.6.0",
-    "zone.js": "~0.14.0",
-    "ethers": "^6.9.2",
-    "socket.io-client": "^4.6.1",
-    "@ngrx/store": "^18.0.0",
+    "@jsverse/transloco": "^7.4.3",
     "@ngrx/effects": "^18.0.0",
     "@ngrx/entity": "^18.0.0",
-    "@ngrx/router-store": "^18.0.0"
+    "@ngrx/router-store": "^18.0.0",
+    "@ngrx/store": "^18.0.0",
+    "ethers": "^6.9.2",
+    "rxjs": "~7.8.0",
+    "socket.io-client": "^4.6.1",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.0",

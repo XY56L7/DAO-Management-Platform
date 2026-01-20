@@ -1,0 +1,186 @@
+{
+  "menu": {
+    "home": "Főoldal",
+    "dashboard": "Irányítópult",
+    "proposals": "Javaslatok",
+    "treasury": "Kincstár",
+    "governance": "Kormányzás",
+    "analytics": "Elemzések"
+  },
+  "common": {
+    "connect": "Tárca Csatlakoztatása",
+    "disconnect": "Lecsatlakozás",
+    "loading": "Betöltés...",
+    "submit": "Beküldés",
+    "cancel": "Mégse",
+    "create": "Létrehozás",
+    "vote": "Szavazás",
+    "confirm": "Megerősítés",
+    "back": "Vissza"
+  },
+  "home": {
+    "title": "DAO Menedzsment Platform",
+    "subtitle": "Egyszerűvé tett decentralizált kormányzás. Hozzon létre javaslatokat, szavazzon és kezelje a kincstárat teljes átláthatósággal és biztonsággal.",
+    "viewProposals": "Javaslatok Megtekintése",
+    "getStarted": "Kezdjük El",
+    "keyFeatures": "Főbb Funkciók",
+    "howToParticipate": "Hogyan Vegyen Részt",
+    "about": "A Platformról",
+    "faq": "Gyakran Ismételt Kérdések",
+    "readyToStart": "Készen Áll az Indulásra?",
+    "readyDescription": "Csatlakoztassa tárcáját és kezdjen el részt venni a DAO kormányzásban még ma.",
+    "exploreProposals": "Javaslatok Felfedezése"
+  },
+  "features": {
+    "governance": {
+      "title": "Decentralizált Kormányzás",
+      "description": "Hozzon létre és szavazzon javaslatokról átlátható on-chain végrehajtással."
+    },
+    "treasury": {
+      "title": "Kincstár Kezelés",
+      "description": "Multi-aláírású kincstár biztonságos alapkezeléssel és nyomon követéssel."
+    },
+    "locking": {
+      "title": "Token Zárolás",
+      "description": "Zárolja be a tokeneket a szavazati erő növelésére és a kormányzásban való részvételre."
+    },
+    "delegation": {
+      "title": "Szavazat Delegálás",
+      "description": "Delegálja szavazati erejét megbízható közösségi tagoknak."
+    }
+  },
+  "steps": {
+    "connectWallet": {
+      "title": "Csatlakoztassa Tárcáját",
+      "description": "Kattintson a \"Tárca Csatlakoztatása\" gombra és hagyja jóvá a MetaMask kapcsolatot."
+    },
+    "getTokens": {
+      "title": "Szerezzen Kormányzási Tokeneket",
+      "description": "Szerezzen DGOV tokeneket a DAO kormányzásban való részvételhez."
+    },
+    "lockTokens": {
+      "title": "Tokenek Zárolása (Opcionális)",
+      "description": "Zárolja be a tokeneket a Kormányzás részben a szavazati erő növeléséhez."
+    },
+    "voteProposals": {
+      "title": "Szavazzon Javaslatokra",
+      "description": "Böngésszen az aktív javaslatok között és adja le szavazatát (Mellette, Ellene vagy Tartózkodás)."
+    },
+    "createProposals": {
+      "title": "Hozzon Létre Javaslatokat",
+      "description": "Nyújtsa be saját javaslatait a DAO fejlesztésére."
+    }
+  },
+  "dashboard": {
+    "title": "Irányítópult",
+    "totalProposals": "Összes Javaslat",
+    "activeProposals": "Aktív Javaslatok",
+    "totalMembers": "Összes Tag",
+    "totalVotes": "Összes Szavazat",
+    "recentProposals": "Legutóbbi Javaslatok",
+    "viewAll": "Összes Megtekintése",
+    "treasury": "Kincstár",
+    "ethBalance": "ETH Egyenleg",
+    "viewTreasury": "Kincstár Megtekintése",
+    "yourVotingPower": "Az Ön Szavazati Ereje",
+    "manageGovernance": "Kormányzás Kezelése"
+  },
+  "proposals": {
+    "title": "Javaslatok",
+    "createProposal": "Javaslat Létrehozása",
+    "state": "Állapot",
+    "category": "Kategória",
+    "all": "Összes",
+    "pending": "Folyamatban",
+    "active": "Aktív",
+    "succeeded": "Sikeres",
+    "defeated": "Elutasítva",
+    "executed": "Végrehajtva",
+    "noProposals": "Nem található javaslat",
+    "forVotes": "Mellette",
+    "againstVotes": "Ellene",
+    "abstainVotes": "Tartózkodás",
+    "description": "Leírás",
+    "votes": "Szavazatok",
+    "voters": "Szavazók",
+    "noVotes": "Még nincsenek szavazatok",
+    "castYourVote": "Szavazat Leadása",
+    "voteFor": "Szavazat Mellette",
+    "voteAgainst": "Szavazat Ellene",
+    "voteAbstain": "Tartózkodás",
+    "reason": "Szavazata indoka (opcionális)",
+    "alreadyVoted": "Már szavazott erre a javaslatra",
+    "proposalDetails": "Javaslat Részletei",
+    "status": "Állapot",
+    "proposer": "Javaslattevő"
+  },
+  "createProposal": {
+    "title": "Új Javaslat Létrehozása",
+    "proposalTitle": "Cím",
+    "enterTitle": "Adja meg a javaslat címét",
+    "category": "Kategória",
+    "description": "Leírás",
+    "describeProposal": "Írja le részletesen a javaslatát"
+  },
+  "treasury": {
+    "title": "Kincstár",
+    "balance": "Kincstár Egyenlege",
+    "ethBalance": "ETH Egyenleg",
+    "inflowsLabel": "30 Napos Beáramlás",
+    "outflowsLabel": "30 Napos Kiáramlás",
+    "netChangeLabel": "Nettó Változás",
+    "recentTransactions": "Legutóbbi Tranzakciók",
+    "noTransactions": "Még nincsenek tranzakciók",
+    "deposit": "Befizetés",
+    "withdrawal": "Kifizetés",
+    "transfer": "Átutalás",
+    "expenditure": "Kiadás"
+  },
+  "governance": {
+    "title": "Kormányzás",
+    "yourVotingPower": "Az Ön Szavazati Ereje",
+    "totalVotingPower": "Összes Szavazati Erő",
+    "direct": "Közvetlen",
+    "escrow": "Zárolt",
+    "lockedTokens": "Zárolt Tokenek",
+    "amountLocked": "Zárolt Mennyiség",
+    "unlockDate": "Feloldás Dátuma",
+    "noTokensLocked": "Jelenleg nincsenek zárolt tokenek",
+    "lockTokensTitle": "Tokenek Zárolása Szavazati Erőért",
+    "amountToLock": "Zárolni Kívánt Mennyiség",
+    "lockDuration": "Zárolási Időtartam (napok)",
+    "longerLock": "Hosszabb zárolás = Több szavazati erő",
+    "lockTokens": "Tokenek Zárolása",
+    "governanceSettings": "Kormányzási Beállítások",
+    "votingDelay": "Szavazási Késleltetés",
+    "votingPeriod": "Szavazási Időszak",
+    "proposalThreshold": "Javaslati Küszöb",
+    "quorum": "Kvórum",
+    "blocks": "blokk",
+    "tokens": "token",
+    "aboutGovernance": "A Kormányzásról",
+    "aboutItems": {
+      "lock": "Zárolja be a tokeneket a szavazati erő növeléséhez",
+      "longer": "A hosszabb zárolási időszakok több szavazati erőt biztosítanak",
+      "delegate": "Delegálja szavazati erejét másoknak",
+      "participate": "Vegyen részt a DAO döntéseiben javaslatok révén"
+    }
+  },
+  "analytics": {
+    "title": "Elemzések",
+    "topVoters": "Legjobb Szavazók",
+    "topProposers": "Legjobb Javaslattevők",
+    "participationRate": "Részvételi Arány (Legutóbbi Javaslatok)",
+    "noData": "Nincs elérhető adat",
+    "votes": "szavazat",
+    "proposals": "javaslat"
+  },
+  "profile": {
+    "title": "Profil",
+    "votingPower": "Szavazati Erő",
+    "proposalsCreated": "Létrehozott Javaslatok",
+    "votesCast": "Leadott Szavazatok",
+    "voteHistory": "Szavazási Előzmények",
+    "noVoteHistory": "Nincs elérhető szavazási előzmény"
+  }
+}

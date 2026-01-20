@@ -48,6 +48,11 @@ export class GovernanceComponent implements OnInit {
     }
   }
 
+  hasLockedTokens(): boolean {
+    const amount = this.lockedBalance()?.amount;
+    return amount ? parseFloat(amount) > 0 : false;
+  }
+
   async lockTokens() {
     if (!this.account()) {
       alert('Please connect your wallet');
@@ -55,7 +60,7 @@ export class GovernanceComponent implements OnInit {
     }
 
     const amount = this.lockAmount();
-    const duration = this.lockDuration() * 24 * 60 * 60; // Convert days to seconds
+    const duration = this.lockDuration() * 24 * 60 * 60;
 
     if (!amount || parseFloat(amount) <= 0) {
       alert('Please enter a valid amount');

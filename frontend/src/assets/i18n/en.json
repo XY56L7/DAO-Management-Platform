@@ -1,0 +1,186 @@
+{
+  "menu": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "proposals": "Proposals",
+    "treasury": "Treasury",
+    "governance": "Governance",
+    "analytics": "Analytics"
+  },
+  "common": {
+    "connect": "Connect Wallet",
+    "disconnect": "Disconnect",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "create": "Create",
+    "vote": "Vote",
+    "confirm": "Confirm",
+    "back": "Back"
+  },
+  "home": {
+    "title": "DAO Management Platform",
+    "subtitle": "Decentralized governance made simple. Create proposals, vote, and manage treasury with complete transparency and security.",
+    "viewProposals": "View Proposals",
+    "getStarted": "Get Started",
+    "keyFeatures": "Key Features",
+    "howToParticipate": "How to Participate",
+    "about": "About the Platform",
+    "faq": "Frequently Asked Questions",
+    "readyToStart": "Ready to Get Started?",
+    "readyDescription": "Connect your wallet and start participating in DAO governance today.",
+    "exploreProposals": "Explore Proposals"
+  },
+  "features": {
+    "governance": {
+      "title": "Decentralized Governance",
+      "description": "Create and vote on proposals with transparent on-chain execution."
+    },
+    "treasury": {
+      "title": "Treasury Management",
+      "description": "Multi-signature treasury with secure fund management and tracking."
+    },
+    "locking": {
+      "title": "Token Locking",
+      "description": "Lock tokens to increase voting power and participate in governance."
+    },
+    "delegation": {
+      "title": "Vote Delegation",
+      "description": "Delegate your voting power to trusted community members."
+    }
+  },
+  "steps": {
+    "connectWallet": {
+      "title": "Connect Your Wallet",
+      "description": "Click \"Connect Wallet\" and approve the MetaMask connection."
+    },
+    "getTokens": {
+      "title": "Get Governance Tokens",
+      "description": "Acquire DGOV tokens to participate in DAO governance."
+    },
+    "lockTokens": {
+      "title": "Lock Tokens (Optional)",
+      "description": "Lock tokens in the Governance section to increase your voting power."
+    },
+    "voteProposals": {
+      "title": "Vote on Proposals",
+      "description": "Browse active proposals and cast your vote (For, Against, or Abstain)."
+    },
+    "createProposals": {
+      "title": "Create Proposals",
+      "description": "Submit your own proposals to improve the DAO."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "totalProposals": "Total Proposals",
+    "activeProposals": "Active Proposals",
+    "totalMembers": "Total Members",
+    "totalVotes": "Total Votes",
+    "recentProposals": "Recent Proposals",
+    "viewAll": "View All",
+    "treasury": "Treasury",
+    "ethBalance": "ETH Balance",
+    "viewTreasury": "View Treasury",
+    "yourVotingPower": "Your Voting Power",
+    "manageGovernance": "Manage Governance"
+  },
+  "proposals": {
+    "title": "Proposals",
+    "createProposal": "Create Proposal",
+    "state": "State",
+    "category": "Category",
+    "all": "All",
+    "pending": "Pending",
+    "active": "Active",
+    "succeeded": "Succeeded",
+    "defeated": "Defeated",
+    "executed": "Executed",
+    "noProposals": "No proposals found",
+    "forVotes": "For",
+    "againstVotes": "Against",
+    "abstainVotes": "Abstain",
+    "description": "Description",
+    "votes": "Votes",
+    "voters": "Voters",
+    "noVotes": "No votes yet",
+    "castYourVote": "Cast Your Vote",
+    "voteFor": "Vote For",
+    "voteAgainst": "Vote Against",
+    "voteAbstain": "Abstain",
+    "reason": "Reason for your vote (optional)",
+    "alreadyVoted": "You have already voted on this proposal",
+    "proposalDetails": "Proposal Details",
+    "status": "Status",
+    "proposer": "Proposer"
+  },
+  "createProposal": {
+    "title": "Create New Proposal",
+    "proposalTitle": "Title",
+    "enterTitle": "Enter proposal title",
+    "category": "Category",
+    "description": "Description",
+    "describeProposal": "Describe your proposal in detail"
+  },
+  "treasury": {
+    "title": "Treasury",
+    "balance": "Treasury Balance",
+    "ethBalance": "ETH Balance",
+    "inflowsLabel": "30-Day Inflows",
+    "outflowsLabel": "30-Day Outflows",
+    "netChangeLabel": "Net Change",
+    "recentTransactions": "Recent Transactions",
+    "noTransactions": "No transactions yet",
+    "deposit": "Deposit",
+    "withdrawal": "Withdrawal",
+    "transfer": "Transfer",
+    "expenditure": "Expenditure"
+  },
+  "governance": {
+    "title": "Governance",
+    "yourVotingPower": "Your Voting Power",
+    "totalVotingPower": "Total Voting Power",
+    "direct": "Direct",
+    "escrow": "Escrow",
+    "lockedTokens": "Locked Tokens",
+    "amountLocked": "Amount Locked",
+    "unlockDate": "Unlock Date",
+    "noTokensLocked": "No tokens currently locked",
+    "lockTokensTitle": "Lock Tokens for Voting Power",
+    "amountToLock": "Amount to Lock",
+    "lockDuration": "Lock Duration (days)",
+    "longerLock": "Longer locks = More voting power",
+    "lockTokens": "Lock Tokens",
+    "governanceSettings": "Governance Settings",
+    "votingDelay": "Voting Delay",
+    "votingPeriod": "Voting Period",
+    "proposalThreshold": "Proposal Threshold",
+    "quorum": "Quorum",
+    "blocks": "blocks",
+    "tokens": "tokens",
+    "aboutGovernance": "About Governance",
+    "aboutItems": {
+      "lock": "Lock tokens to increase your voting power",
+      "longer": "Longer lock periods provide more voting power",
+      "delegate": "Delegate your voting power to others",
+      "participate": "Participate in DAO decisions through proposals"
+    }
+  },
+  "analytics": {
+    "title": "Analytics",
+    "topVoters": "Top Voters",
+    "topProposers": "Top Proposers",
+    "participationRate": "Participation Rate (Recent Proposals)",
+    "noData": "No data available",
+    "votes": "votes",
+    "proposals": "proposals"
+  },
+  "profile": {
+    "title": "Profile",
+    "votingPower": "Voting Power",
+    "proposalsCreated": "Proposals Created",
+    "votesCast": "Votes Cast",
+    "voteHistory": "Vote History",
+    "noVoteHistory": "No vote history available"
+  }
+}

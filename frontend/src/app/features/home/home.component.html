@@ -1,0 +1,148 @@
+<div class="home-page">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>DAO Management Platform</h1>
+      <p class="subtitle">
+        Decentralized governance made simple. Create proposals, vote, and manage treasury 
+        with complete transparency and security.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/proposals" class="btn btn-primary">View Proposals</a>
+        <a routerLink="/governance" class="btn btn-secondary">Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <div class="grid grid-cols-2">
+      @for (feature of features; track feature.title) {
+        <div class="card feature-card">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="how-to">
+    <h2>How to Participate</h2>
+    <div class="steps">
+      @for (step of howToSteps; track step.step) {
+        <div class="step-card">
+          <div class="step-number">{{ step.step }}</div>
+          <div class="step-content">
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About the Platform</h2>
+    <div class="card about-content">
+      <h3>What is a DAO?</h3>
+      <p>
+        A Decentralized Autonomous Organization (DAO) is an organization governed by smart contracts 
+        and community voting. Members hold governance tokens that grant them voting rights on proposals 
+        that shape the organization's future.
+      </p>
+
+      <h3>Governance Token (DGOV)</h3>
+      <p>
+        DGOV is the governance token that powers this DAO. Holding DGOV tokens allows you to:
+      </p>
+      <ul>
+        <li>Vote on proposals</li>
+        <li>Create new proposals</li>
+        <li>Delegate voting power to others</li>
+        <li>Participate in treasury decisions</li>
+      </ul>
+
+      <h3>Voting Power</h3>
+      <p>
+        Your voting power is determined by the amount of DGOV tokens you hold. You can increase 
+        your voting power by locking tokens for a specified period. Longer lock periods result 
+        in greater voting power.
+      </p>
+
+      <h3>Proposals</h3>
+      <p>
+        Proposals are suggestions for changes or actions the DAO should take. They can include:
+      </p>
+      <ul>
+        <li>Treasury fund allocation</li>
+        <li>Protocol parameter changes</li>
+        <li>Strategic decisions</li>
+        <li>Community initiatives</li>
+      </ul>
+      <p>
+        Once a proposal is created, it goes through a voting period where token holders can 
+        vote For, Against, or Abstain. If a proposal reaches quorum and passes, it can be 
+        executed on-chain.
+      </p>
+
+      <h3>Treasury</h3>
+      <p>
+        The DAO treasury holds the organization's funds. All treasury transactions require 
+        multi-signature approval to ensure security. The community votes on how treasury 
+        funds should be spent.
+      </p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="card faq-content">
+      <div class="faq-item">
+        <h4>Do I need tokens to participate?</h4>
+        <p>
+          Yes, you need DGOV tokens to vote on proposals and participate in governance. 
+          You can view proposals and DAO statistics without tokens.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How do I get voting power?</h4>
+        <p>
+          Hold DGOV tokens in your wallet. You can increase your voting power by locking 
+          tokens in the vote escrow contract.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I change my vote?</h4>
+        <p>
+          No, once you cast a vote on a proposal, it cannot be changed. Make sure to review 
+          the proposal carefully before voting.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What is vote delegation?</h4>
+        <p>
+          Vote delegation allows you to assign your voting power to another address. This is 
+          useful if you trust someone else to vote on your behalf.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How long does the voting period last?</h4>
+        <p>
+          The voting period is set by the governance parameters. You can view the current 
+          settings in the Governance section.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="card cta-content">
+      <h2>Ready to Get Started?</h2>
+      <p>Connect your wallet and start participating in DAO governance today.</p>
+      <a routerLink="/proposals" class="btn btn-primary">Explore Proposals</a>
+    </div>
+  </section>
+</div>

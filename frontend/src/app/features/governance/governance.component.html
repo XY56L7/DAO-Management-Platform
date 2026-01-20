@@ -32,7 +32,7 @@
           <!-- Locked Tokens -->
           <div class="card">
             <h2>Locked Tokens</h2>
-            @if (lockedBalance()?.amount && parseFloat(lockedBalance()?.amount) > 0) {
+            @if (lockedBalance()?.amount && hasLockedTokens()) {
               <div class="locked-info">
                 <div class="locked-amount">
                   <span class="label">Amount Locked</span>

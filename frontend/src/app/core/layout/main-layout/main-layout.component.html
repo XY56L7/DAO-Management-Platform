@@ -18,7 +18,7 @@
         >
           <span class="icon">{{ item.icon }}</span>
           @if (isSidebarOpen()) {
-            <span class="label">{{ item.label }}</span>
+            <span class="label">{{ 'menu.' + item.path.substring(1) | transloco }}</span>
           }
         </a>
       }
@@ -35,9 +35,28 @@
         </div>
 
         <div class="header-right">
+          <div class="language-selector">
+            <button class="language-btn" (click)="toggleLanguageMenu()">
+              <span class="current-lang">{{ getCurrentLanguageLabel() }}</span>
+            </button>
+            @if (showLanguageMenu()) {
+              <div class="language-dropdown" [@slideIn]>
+                @for (lang of languageService.languages; track lang.id) {
+                  <button 
+                    class="lang-option" 
+                    [class.selected]="lang.id === languageService.getCurrentLanguage()"
+                    (click)="changeLanguage(lang.id)"
+                  >
+                    <span class="lang-label">{{ lang.label }}</span>
+                  </button>
+                }
+              </div>
+            }
+          </div>
+
           @if (!isConnected()) {
             <button class="btn btn-primary" (click)="connectWallet()">
-              Connect Wallet
+              {{ 'common.connect' | transloco }}
             </button>
           } @else {
             <div class="wallet-info">
@@ -45,7 +64,7 @@
                 {{ formatAddress(account()!) }}
               </div>
               <button class="btn btn-secondary" (click)="disconnectWallet()">
-                Disconnect
+                {{ 'common.disconnect' | transloco }}
               </button>
             </div>
           }

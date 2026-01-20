@@ -1,0 +1,186 @@
+{
+  "menu": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "proposals": "Propuestas",
+    "treasury": "Tesorería",
+    "governance": "Gobernanza",
+    "analytics": "Analíticas"
+  },
+  "common": {
+    "connect": "Conectar Billetera",
+    "disconnect": "Desconectar",
+    "loading": "Cargando...",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "create": "Crear",
+    "vote": "Votar",
+    "confirm": "Confirmar",
+    "back": "Volver"
+  },
+  "home": {
+    "title": "Plataforma de Gestión DAO",
+    "subtitle": "Gobernanza descentralizada hecha simple. Cree propuestas, vote y administre la tesorería con total transparencia y seguridad.",
+    "viewProposals": "Ver Propuestas",
+    "getStarted": "Comenzar",
+    "keyFeatures": "Características Principales",
+    "howToParticipate": "Cómo Participar",
+    "about": "Acerca de la Plataforma",
+    "faq": "Preguntas Frecuentes",
+    "readyToStart": "¿Listo para Comenzar?",
+    "readyDescription": "Conecta tu billetera y comienza a participar en la gobernanza DAO hoy.",
+    "exploreProposals": "Explorar Propuestas"
+  },
+  "features": {
+    "governance": {
+      "title": "Gobernanza Descentralizada",
+      "description": "Cree y vote propuestas con ejecución transparente en cadena."
+    },
+    "treasury": {
+      "title": "Gestión de Tesorería",
+      "description": "Tesorería multi-firma con gestión segura de fondos y seguimiento."
+    },
+    "locking": {
+      "title": "Bloqueo de Tokens",
+      "description": "Bloquee tokens para aumentar el poder de voto y participar en la gobernanza."
+    },
+    "delegation": {
+      "title": "Delegación de Votos",
+      "description": "Delegue su poder de voto a miembros de confianza de la comunidad."
+    }
+  },
+  "steps": {
+    "connectWallet": {
+      "title": "Conectar su Billetera",
+      "description": "Haga clic en \"Conectar Billetera\" y apruebe la conexión de MetaMask."
+    },
+    "getTokens": {
+      "title": "Obtener Tokens de Gobernanza",
+      "description": "Adquiera tokens DGOV para participar en la gobernanza DAO."
+    },
+    "lockTokens": {
+      "title": "Bloquear Tokens (Opcional)",
+      "description": "Bloquee tokens en la sección de Gobernanza para aumentar su poder de voto."
+    },
+    "voteProposals": {
+      "title": "Votar en Propuestas",
+      "description": "Explore propuestas activas y emita su voto (A favor, En contra o Abstención)."
+    },
+    "createProposals": {
+      "title": "Crear Propuestas",
+      "description": "Envíe sus propias propuestas para mejorar el DAO."
+    }
+  },
+  "dashboard": {
+    "title": "Panel",
+    "totalProposals": "Total de Propuestas",
+    "activeProposals": "Propuestas Activas",
+    "totalMembers": "Total de Miembros",
+    "totalVotes": "Total de Votos",
+    "recentProposals": "Propuestas Recientes",
+    "viewAll": "Ver Todas",
+    "treasury": "Tesorería",
+    "ethBalance": "Saldo ETH",
+    "viewTreasury": "Ver Tesorería",
+    "yourVotingPower": "Su Poder de Voto",
+    "manageGovernance": "Gestionar Gobernanza"
+  },
+  "proposals": {
+    "title": "Propuestas",
+    "createProposal": "Crear Propuesta",
+    "state": "Estado",
+    "category": "Categoría",
+    "all": "Todas",
+    "pending": "Pendiente",
+    "active": "Activa",
+    "succeeded": "Exitosa",
+    "defeated": "Rechazada",
+    "executed": "Ejecutada",
+    "noProposals": "No se encontraron propuestas",
+    "forVotes": "A Favor",
+    "againstVotes": "En Contra",
+    "abstainVotes": "Abstención",
+    "description": "Descripción",
+    "votes": "Votos",
+    "voters": "Votantes",
+    "noVotes": "Aún no hay votos",
+    "castYourVote": "Emitir su Voto",
+    "voteFor": "Votar a Favor",
+    "voteAgainst": "Votar en Contra",
+    "voteAbstain": "Abstenerse",
+    "reason": "Razón de su voto (opcional)",
+    "alreadyVoted": "Ya ha votado en esta propuesta",
+    "proposalDetails": "Detalles de la Propuesta",
+    "status": "Estado",
+    "proposer": "Proponente"
+  },
+  "createProposal": {
+    "title": "Crear Nueva Propuesta",
+    "proposalTitle": "Título",
+    "enterTitle": "Ingrese el título de la propuesta",
+    "category": "Categoría",
+    "description": "Descripción",
+    "describeProposal": "Describa su propuesta en detalle"
+  },
+  "treasury": {
+    "title": "Tesorería",
+    "balance": "Saldo de Tesorería",
+    "ethBalance": "Saldo ETH",
+    "inflowsLabel": "Ingresos de 30 Días",
+    "outflowsLabel": "Egresos de 30 Días",
+    "netChangeLabel": "Cambio Neto",
+    "recentTransactions": "Transacciones Recientes",
+    "noTransactions": "Aún no hay transacciones",
+    "deposit": "Depósito",
+    "withdrawal": "Retiro",
+    "transfer": "Transferencia",
+    "expenditure": "Gasto"
+  },
+  "governance": {
+    "title": "Gobernanza",
+    "yourVotingPower": "Su Poder de Voto",
+    "totalVotingPower": "Poder de Voto Total",
+    "direct": "Directo",
+    "escrow": "Bloqueado",
+    "lockedTokens": "Tokens Bloqueados",
+    "amountLocked": "Cantidad Bloqueada",
+    "unlockDate": "Fecha de Desbloqueo",
+    "noTokensLocked": "No hay tokens bloqueados actualmente",
+    "lockTokensTitle": "Bloquear Tokens para Poder de Voto",
+    "amountToLock": "Cantidad a Bloquear",
+    "lockDuration": "Duración del Bloqueo (días)",
+    "longerLock": "Bloqueos más largos = Más poder de voto",
+    "lockTokens": "Bloquear Tokens",
+    "governanceSettings": "Configuración de Gobernanza",
+    "votingDelay": "Retraso de Votación",
+    "votingPeriod": "Período de Votación",
+    "proposalThreshold": "Umbral de Propuesta",
+    "quorum": "Quórum",
+    "blocks": "bloques",
+    "tokens": "tokens",
+    "aboutGovernance": "Acerca de la Gobernanza",
+    "aboutItems": {
+      "lock": "Bloquee tokens para aumentar su poder de voto",
+      "longer": "Períodos de bloqueo más largos proporcionan más poder de voto",
+      "delegate": "Delegue su poder de voto a otros",
+      "participate": "Participe en decisiones DAO a través de propuestas"
+    }
+  },
+  "analytics": {
+    "title": "Analíticas",
+    "topVoters": "Principales Votantes",
+    "topProposers": "Principales Proponentes",
+    "participationRate": "Tasa de Participación (Propuestas Recientes)",
+    "noData": "No hay datos disponibles",
+    "votes": "votos",
+    "proposals": "propuestas"
+  },
+  "profile": {
+    "title": "Perfil",
+    "votingPower": "Poder de Voto",
+    "proposalsCreated": "Propuestas Creadas",
+    "votesCast": "Votos Emitidos",
+    "voteHistory": "Historial de Votos",
+    "noVoteHistory": "No hay historial de votos disponible"
+  }
+}

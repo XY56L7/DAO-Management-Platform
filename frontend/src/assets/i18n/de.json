@@ -1,0 +1,186 @@
+{
+  "menu": {
+    "home": "Startseite",
+    "dashboard": "Dashboard",
+    "proposals": "Vorschläge",
+    "treasury": "Schatzkammer",
+    "governance": "Governance",
+    "analytics": "Analysen"
+  },
+  "common": {
+    "connect": "Wallet Verbinden",
+    "disconnect": "Trennen",
+    "loading": "Laden...",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "create": "Erstellen",
+    "vote": "Abstimmen",
+    "confirm": "Bestätigen",
+    "back": "Zurück"
+  },
+  "home": {
+    "title": "DAO Management Plattform",
+    "subtitle": "Dezentrale Governance einfach gemacht. Erstellen Sie Vorschläge, stimmen Sie ab und verwalten Sie die Schatzkammer mit vollständiger Transparenz und Sicherheit.",
+    "viewProposals": "Vorschläge Ansehen",
+    "getStarted": "Loslegen",
+    "keyFeatures": "Hauptfunktionen",
+    "howToParticipate": "So Nehmen Sie Teil",
+    "about": "Über die Plattform",
+    "faq": "Häufig Gestellte Fragen",
+    "readyToStart": "Bereit Anzufangen?",
+    "readyDescription": "Verbinden Sie Ihr Wallet und beginnen Sie noch heute an der DAO-Governance teilzunehmen.",
+    "exploreProposals": "Vorschläge Erkunden"
+  },
+  "features": {
+    "governance": {
+      "title": "Dezentrale Governance",
+      "description": "Erstellen und stimmen Sie über Vorschläge mit transparenter On-Chain-Ausführung ab."
+    },
+    "treasury": {
+      "title": "Schatzkammer-Verwaltung",
+      "description": "Multi-Signatur-Schatzkammer mit sicherer Fondsverwaltung und Nachverfolgung."
+    },
+    "locking": {
+      "title": "Token-Sperrung",
+      "description": "Sperren Sie Token, um die Stimmkraft zu erhöhen und an der Governance teilzunehmen."
+    },
+    "delegation": {
+      "title": "Stimmdelegation",
+      "description": "Delegieren Sie Ihre Stimmkraft an vertrauenswürdige Community-Mitglieder."
+    }
+  },
+  "steps": {
+    "connectWallet": {
+      "title": "Wallet Verbinden",
+      "description": "Klicken Sie auf \"Wallet Verbinden\" und bestätigen Sie die MetaMask-Verbindung."
+    },
+    "getTokens": {
+      "title": "Governance-Token Erhalten",
+      "description": "Erwerben Sie DGOV-Token, um an der DAO-Governance teilzunehmen."
+    },
+    "lockTokens": {
+      "title": "Token Sperren (Optional)",
+      "description": "Sperren Sie Token im Governance-Bereich, um Ihre Stimmkraft zu erhöhen."
+    },
+    "voteProposals": {
+      "title": "Über Vorschläge Abstimmen",
+      "description": "Durchsuchen Sie aktive Vorschläge und geben Sie Ihre Stimme ab (Dafür, Dagegen oder Enthaltung)."
+    },
+    "createProposals": {
+      "title": "Vorschläge Erstellen",
+      "description": "Reichen Sie Ihre eigenen Vorschläge ein, um die DAO zu verbessern."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "totalProposals": "Gesamt Vorschläge",
+    "activeProposals": "Aktive Vorschläge",
+    "totalMembers": "Gesamt Mitglieder",
+    "totalVotes": "Gesamt Stimmen",
+    "recentProposals": "Neueste Vorschläge",
+    "viewAll": "Alle Anzeigen",
+    "treasury": "Schatzkammer",
+    "ethBalance": "ETH Guthaben",
+    "viewTreasury": "Schatzkammer Ansehen",
+    "yourVotingPower": "Ihre Stimmkraft",
+    "manageGovernance": "Governance Verwalten"
+  },
+  "proposals": {
+    "title": "Vorschläge",
+    "createProposal": "Vorschlag Erstellen",
+    "state": "Status",
+    "category": "Kategorie",
+    "all": "Alle",
+    "pending": "Ausstehend",
+    "active": "Aktiv",
+    "succeeded": "Erfolgreich",
+    "defeated": "Abgelehnt",
+    "executed": "Ausgeführt",
+    "noProposals": "Keine Vorschläge gefunden",
+    "forVotes": "Dafür",
+    "againstVotes": "Dagegen",
+    "abstainVotes": "Enthaltung",
+    "description": "Beschreibung",
+    "votes": "Stimmen",
+    "voters": "Wähler",
+    "noVotes": "Noch keine Stimmen",
+    "castYourVote": "Ihre Stimme Abgeben",
+    "voteFor": "Dafür Stimmen",
+    "voteAgainst": "Dagegen Stimmen",
+    "voteAbstain": "Enthalten",
+    "reason": "Grund für Ihre Stimme (optional)",
+    "alreadyVoted": "Sie haben bereits über diesen Vorschlag abgestimmt",
+    "proposalDetails": "Vorschlagsdetails",
+    "status": "Status",
+    "proposer": "Antragsteller"
+  },
+  "createProposal": {
+    "title": "Neuen Vorschlag Erstellen",
+    "proposalTitle": "Titel",
+    "enterTitle": "Vorschlagstitel eingeben",
+    "category": "Kategorie",
+    "description": "Beschreibung",
+    "describeProposal": "Beschreiben Sie Ihren Vorschlag im Detail"
+  },
+  "treasury": {
+    "title": "Schatzkammer",
+    "balance": "Schatzkammer Guthaben",
+    "ethBalance": "ETH Guthaben",
+    "inflowsLabel": "30-Tage Zuflüsse",
+    "outflowsLabel": "30-Tage Abflüsse",
+    "netChangeLabel": "Nettoveränderung",
+    "recentTransactions": "Neueste Transaktionen",
+    "noTransactions": "Noch keine Transaktionen",
+    "deposit": "Einzahlung",
+    "withdrawal": "Auszahlung",
+    "transfer": "Überweisung",
+    "expenditure": "Ausgabe"
+  },
+  "governance": {
+    "title": "Governance",
+    "yourVotingPower": "Ihre Stimmkraft",
+    "totalVotingPower": "Gesamt Stimmkraft",
+    "direct": "Direkt",
+    "escrow": "Gesperrt",
+    "lockedTokens": "Gesperrte Token",
+    "amountLocked": "Gesperrter Betrag",
+    "unlockDate": "Entsperrdatum",
+    "noTokensLocked": "Derzeit keine Token gesperrt",
+    "lockTokensTitle": "Token für Stimmkraft Sperren",
+    "amountToLock": "Zu sperrender Betrag",
+    "lockDuration": "Sperrdauer (Tage)",
+    "longerLock": "Längere Sperrungen = Mehr Stimmkraft",
+    "lockTokens": "Token Sperren",
+    "governanceSettings": "Governance-Einstellungen",
+    "votingDelay": "Abstimmungsverzögerung",
+    "votingPeriod": "Abstimmungszeitraum",
+    "proposalThreshold": "Vorschlagsschwelle",
+    "quorum": "Quorum",
+    "blocks": "Blöcke",
+    "tokens": "Token",
+    "aboutGovernance": "Über Governance",
+    "aboutItems": {
+      "lock": "Sperren Sie Token, um Ihre Stimmkraft zu erhöhen",
+      "longer": "Längere Sperrfristen bieten mehr Stimmkraft",
+      "delegate": "Delegieren Sie Ihre Stimmkraft an andere",
+      "participate": "Nehmen Sie durch Vorschläge an DAO-Entscheidungen teil"
+    }
+  },
+  "analytics": {
+    "title": "Analysen",
+    "topVoters": "Top Wähler",
+    "topProposers": "Top Antragsteller",
+    "participationRate": "Beteiligungsrate (Neueste Vorschläge)",
+    "noData": "Keine Daten verfügbar",
+    "votes": "Stimmen",
+    "proposals": "Vorschläge"
+  },
+  "profile": {
+    "title": "Profil",
+    "votingPower": "Stimmkraft",
+    "proposalsCreated": "Erstellte Vorschläge",
+    "votesCast": "Abgegebene Stimmen",
+    "voteHistory": "Stimmhistorie",
+    "noVoteHistory": "Keine Stimmhistorie verfügbar"
+  }
+}

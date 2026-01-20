@@ -45,4 +45,9 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
+
+  getAvatarLetter(): string {
+    const username = this.user()?.username;
+    return username ? username.charAt(0).toUpperCase() : '?';
+  }
 }
