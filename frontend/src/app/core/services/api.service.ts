@@ -48,7 +48,6 @@ export class ApiService {
   private baseUrl = environment.apiUrl;
   private useMockData = true;
 
-  // Mock Data
   private mockProposals: Proposal[] = [
     {
       proposalId: '1',
@@ -144,7 +143,6 @@ export class ApiService {
     }
   ];
 
-  // Proposals
   getProposals(params?: any): Observable<any> {
     if (this.useMockData) {
       return of({ proposals: this.mockProposals, total: this.mockProposals.length }).pipe(delay(300));
@@ -211,7 +209,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/proposals/stats/overview`);
   }
 
-  // Voting
   castVote(voteData: any): Observable<any> {
     if (this.useMockData) {
       return of({ success: true, txHash: '0x' + Math.random().toString(16).substr(2, 64) }).pipe(delay(800));
@@ -250,7 +247,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/voting/history/${address}`);
   }
 
-  // Treasury
   getTreasuryBalance(): Observable<any> {
     if (this.useMockData) {
       return of({
@@ -325,7 +321,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/treasury/expenditures`);
   }
 
-  // Tokens
   getTokenInfo(): Observable<any> {
     if (this.useMockData) {
       return of({
@@ -384,7 +379,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/tokens/vesting/${address}`);
   }
 
-  // Governance
   getGovernanceSettings(): Observable<any> {
     if (this.useMockData) {
       return of({
@@ -416,7 +410,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/governance/contracts`);
   }
 
-  // Analytics
   getOverallStats(): Observable<any> {
     if (this.useMockData) {
       return of({
@@ -525,7 +518,6 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/analytics/timeline?days=${days}`);
   }
 
-  // Users
   getUserProfile(address: string): Observable<User> {
     if (this.useMockData) {
       const user = this.mockUsers.find(u => u.address === address) || {
