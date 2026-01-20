@@ -89,7 +89,3 @@ npm start
 ```
 
 Open `http://localhost:4200` in your browser.
-
-## License
-
-MIT
