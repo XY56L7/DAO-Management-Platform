@@ -53,7 +53,6 @@ export class DashboardComponent implements OnInit {
         });
       }
     } catch (error) {
-      console.error('Error loading dashboard:', error);
     } finally {
       this.loading.set(false);
     }

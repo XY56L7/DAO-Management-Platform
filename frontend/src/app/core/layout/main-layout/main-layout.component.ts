@@ -30,9 +30,7 @@ export class MainLayoutComponent implements OnInit {
   async connectWallet() {
     try {
       await this.web3Service.connect();
-    } catch (error) {
-      console.error('Failed to connect wallet:', error);
-    }
+    } catch (error) {}
   }
 
   disconnectWallet() {

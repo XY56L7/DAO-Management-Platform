@@ -72,7 +72,6 @@ export class GovernanceComponent implements OnInit {
       alert('Tokens locked successfully!');
       this.loadGovernanceData();
     } catch (error) {
-      console.error('Error locking tokens:', error);
       alert('Failed to lock tokens');
     }
   }

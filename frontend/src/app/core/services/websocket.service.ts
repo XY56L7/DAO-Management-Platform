@@ -23,18 +23,14 @@ export class WebsocketService {
     });
 
     this.socket.on('connect', () => {
-      console.log('WebSocket connected');
       this.connected.next(true);
     });
 
     this.socket.on('disconnect', () => {
-      console.log('WebSocket disconnected');
       this.connected.next(false);
     });
 
-    this.socket.on('error', (error: any) => {
-      console.error('WebSocket error:', error);
-    });
+    this.socket.on('error', (error: any) => {});
   }
 
   disconnect() {

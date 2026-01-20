@@ -38,7 +38,6 @@ export class ProposalDetailComponent implements OnInit {
         this.loading.set(false);
       },
       error: (error) => {
-        console.error('Error loading proposal:', error);
         this.loading.set(false);
       }
     });
@@ -64,7 +63,6 @@ export class ProposalDetailComponent implements OnInit {
       await this.loadProposal(this.proposal()!.proposalId);
       this.voteReason.set('');
     } catch (error) {
-      console.error('Error casting vote:', error);
       alert('Failed to cast vote');
     } finally {
       this.voting.set(false);

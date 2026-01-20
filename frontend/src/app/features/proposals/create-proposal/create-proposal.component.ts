@@ -55,7 +55,6 @@ export class CreateProposalComponent {
       alert('Proposal created successfully!');
       this.router.navigate(['/proposals']);
     } catch (error) {
-      console.error('Error creating proposal:', error);
       alert('Failed to create proposal');
     } finally {
       this.submitting.set(false);

@@ -32,9 +32,7 @@ export class Web3Service {
         if (accounts.length > 0) {
           await this.connect();
         }
-      } catch (error) {
-        console.error('Error checking connection:', error);
-      }
+      } catch (error) {}
     }
   }
 
@@ -74,7 +72,6 @@ export class Web3Service {
 
       return accounts[0];
     } catch (error) {
-      console.error('Error connecting to wallet:', error);
       throw error;
     }
   }

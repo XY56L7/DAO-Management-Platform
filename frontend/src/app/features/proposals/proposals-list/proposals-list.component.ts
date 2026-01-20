@@ -51,7 +51,6 @@ export class ProposalsListComponent implements OnInit {
         this.loading.set(false);
       },
       error: (error) => {
-        console.error('Error loading proposals:', error);
         this.loading.set(false);
       }
     });

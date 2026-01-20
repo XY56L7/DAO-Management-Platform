@@ -32,9 +32,7 @@ export class ProfileComponent implements OnInit {
       next: (user) => {
         this.user.set(user);
       },
-      error: (error) => {
-        console.error('Error loading profile:', error);
-      }
+      error: (error) => {}
     });
 
     this.apiService.getVoteHistory(address).subscribe({
@@ -43,7 +41,6 @@ export class ProfileComponent implements OnInit {
         this.loading.set(false);
       },
       error: (error) => {
-        console.error('Error loading vote history:', error);
         this.loading.set(false);
       }
     });
